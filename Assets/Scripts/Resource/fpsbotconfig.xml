@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<parameters>
+	
+	<input>
+		<map_file_nav>arenamap50.txt</map_file_nav>
+		<map_file_nav2>mazemap50.txt</map_file_nav2>
+		<map_file_com>combatmap50.txt</map_file_com>
+		<map_ultimate>ultimatemap50.txt</map_ultimate>
+	</input>
+	
+	<gameplay>
+		<mapsize>50</mapsize>
+		<botnum>4</botnum>
+		
+		<agent_viewrange>120</agent_viewrange>
+		<agent_health>100</agent_health>
+		<tick_cooldown>10</tick_cooldown>
+		<tick_itemrespawn>100</tick_itemrespawn>
+		<medkit>20</medkit>
+		<min_degreeturn>1</min_degreeturn>
+		<max_degreeturn>60</max_degreeturn>
+		<collisiontreshold>0,4</collisiontreshold>
+		
+		<enemy_close>15</enemy_close>
+		<enemy_far>50</enemy_far>
+		<enemy_hit>-10</enemy_hit>
+		
+		<localenv>7</localenv>
+	</gameplay>
+	
+	<output>
+		
+	</output>
+	
+	<reward_nav>
+		<collision>-0,000002</collision>
+		<moving>0,000002</moving>
+		<item>1</item>
+	</reward_nav>
+	
+	<reward_comb>
+		<hit>1</hit>
+		<kill>1</kill>
+		<miss>-0,000002</miss>
+		<killed>-1</killed>
+		<wounded>-0,000002</wounded>
+	</reward_comb>
+	
+	<sarsa>
+		<gamma>0,8</gamma>
+		<alphainit>0,2</alphainit>
+		<alphatarget>0,05</alphatarget>
+		<lambda>0,8</lambda>
+		<epsilon>0,2</epsilon>
+		<iterationlimit>10000</iterationlimit>
+	</sarsa>
+	
+</parameters>
